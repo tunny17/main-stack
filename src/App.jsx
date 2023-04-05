@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Logo } from './assets';
-import Views from './components/Views';
+import { Views, Locations, Source } from './components';
 
 const App = () => {
   return (
@@ -55,6 +55,10 @@ const App = () => {
           </div>
         </div>
         <Views />
+        <div className="base-components">
+          <Locations />
+          <Source />
+        </div>
       </div>
     </div>
   )
