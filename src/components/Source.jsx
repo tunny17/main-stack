@@ -27,6 +27,26 @@ const Source = () => {
           },
         ],
       },
+      options: {
+        plugins: {
+          legend: {
+            position: 'left',
+            fullSize: true,
+            align: 'center',
+            reverse: true,
+            
+            
+            labels: {
+              boxWidth: 10,
+              boxHeight: 10,
+              padding: 20,
+              usePointStyle: true,
+              textAlign: 'left',
+              
+            }
+          }
+        }
+      }
     });
 
     return () => {

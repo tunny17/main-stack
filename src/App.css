@@ -206,3 +206,20 @@
     background: #FFDDCD;
     border: 1px solid #FF5403;
 }
+
+
+
+/* --- Base Components */
+.base-components {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.locations {
+    display: flex;
+    justify-content: space-between;
+}
+.locations-info {
+    
+}
