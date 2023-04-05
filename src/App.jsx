@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Logo } from './assets';
+import Views from './components/Views';
 
 const App = () => {
   return (
@@ -34,7 +35,27 @@ const App = () => {
           <p>Blessing Daniels</p>
         </div>
       </div>
-      <div className="body"></div>
+      <div className="body">
+        <div className="body-heading">
+          <header>Dashboard</header>
+          <div className="heading-info">
+            <div className="info">
+              <h4>Good morning, Blessing ⛅️</h4>
+              <p>Check out your dashboard summary.</p>
+            </div>
+            <p className='analytics'>View Analytics</p>
+          </div>
+          <div className="days">
+            <p className='day'>1 Day</p>
+            <p className='day'>3 Days</p>
+            <p className='day'>7 Days</p>
+            <p className='day'>30 Day</p>
+            <p className='day active-day'>All Time</p>
+            <p className='day'>Custom Date</p>
+          </div>
+        </div>
+        <Views />
+      </div>
     </div>
   )
 }
