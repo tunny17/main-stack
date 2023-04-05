@@ -3,15 +3,150 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2% 3%;
 }
 .navbar {
     width: 20%;
     height: 100vh;
     border: 1px solid #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.logo-container {
+    height: 1%;
+    padding: 5% 10%;
+}
+.navigation {
+    height: 60%;
+    margin-top: 10%;
+}
+.user {
+    height: 30%;
+}
+
+.navigation nav, .navigation ul {
+    width: 100%;
+}
+.navigation nav {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navigation ul li {
+    margin: 2% 0;
+    font-size: 0.8rem;
+    display: flex;
+    padding: 3% 0;
+    padding-left: 22%;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+.navigation ul li:hover {
+    color: #FF5403;
+}
+/* active class */
+.active {
+    border-left: 1px solid #FF5403;  
+}
+/* styling the li sub-headings */
+.navigation h4 {
+    padding-left: 12%;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+/* for each logo next to the navs */
+.dashboard::before {
+    content: url(./assets/dashboard.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav1::before {
+    content: url(./assets/nav-1.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav2::before {
+    content: url(./assets/nav-2.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav3::before {
+    content: url(./assets/nav-3.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav4::before {
+    content: url(./assets/nav-4.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav5::before {
+    content: url(./assets/nav-5.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav6::before {
+    content: url(./assets/nav-6.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav7::before {
+    content: url(./assets/nav-7.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+.nav8::before {
+    content: url(./assets/nav-8.svg);
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
+
+/* user container */
+.user p {
+    padding-left: 23%;
+    font-size: 0.9rem;
+    position: relative;
+    font-weight: 500;
+}
+.user p::before {
+    content: url('./assets/user.svg');
+    position: absolute;
+    top: -25%;
+    left: 12%;
+    zoom: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .body {
     width: 80%;
     height: 100vh;
     border: 1px solid #000;
+    padding: 1%;
 }

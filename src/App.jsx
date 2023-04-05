@@ -12,21 +12,21 @@ const App = () => {
         <div className="navigation">
           <nav>
             <ul>
-              <li>Dashboard</li>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
+              <li className='dashboard active'>Dashboard</li>
+              <li className='nav1'>Item 1</li>
+              <li className='nav2'>Item 2</li>
+              <li className='nav3'>Item 3</li>
             </ul>
             <ul>
-              <li>others 1</li>
-              <li>Item 4</li>
-              <li>Item 5</li>
+              <h4>others 1</h4>
+              <li className='nav4'>Item 4</li>
+              <li className='nav5'>Item 5</li>
             </ul>
             <ul>
-              <li>others 2</li>
-              <li>Item 6</li>
-              <li>Item 7</li>
-              <li>Item 8</li>
+              <h4>others 2</h4>
+              <li className='nav6'>Item 6</li>
+              <li className='nav7'>Item 7</li>
+              <li className='nav8'>Item 8</li>
             </ul>
           </nav>
         </div>
@@ -34,8 +34,7 @@ const App = () => {
           <p>Blessing Daniels</p>
         </div>
       </div>
-      <div className="body">
-      </div>
+      <div className="body"></div>
     </div>
   )
 }
