@@ -1,0 +1,11 @@
+export { default as Dashboard } from './dashboard.svg';
+export { default as Logo } from './mainstack-logo.svg';
+export { default as User } from './user.svg';
+export { default as Nav1 } from './nav-1.svg';
+export { default as Nav2 } from './nav-2.svg';
+export { default as Nav3 } from './nav-3.svg';
+export { default as Nav4 } from './nav-4.svg';
+export { default as Nav5 } from './nav-5.svg';
+export { default as Nav6 } from './nav-6.svg';
+export { default as Nav7 } from './nav-7.svg';
+export { default as Nav8 } from './nav-8.svg';
