@@ -1,14 +1,13 @@
 .app-container {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 .navbar {
     width: 20%;
     height: 100vh;
     border-right: 1px solid #EFF1F6;
 
+    position: fixed;
+    float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -143,7 +142,8 @@
 .body {
     width: 80%;
     height: 100vh;
-    padding: 1% 3%;
+    padding: 1% 5%;
+    margin-left: 20%;
 }
 .body header {
     font-size: 20px;    
@@ -216,10 +216,32 @@
     justify-content: space-between;
 }
 
-.locations {
+.locations-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #EFF1F6;
+    border-radius: 12px;
+
+    padding: 1%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.location-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5%;
+    padding: 0 5%;
+    padding-top: 3%;
 }
-.locations-info {
-    
+.location-header h3 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
+.location-header p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #FF5403;
 }

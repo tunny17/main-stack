@@ -4,6 +4,41 @@ import Chart from 'chart.js/auto';
 const Views = () => {
     const chartRef = useRef(null);
 
+    const apiUrl = 'https://fe-task-api.mainstack.io/';
+
+
+
+// const Locations = () => {
+//   const [apiData, setApiData] = useState({});
+//   let apiDataLabels = [];
+//   let apiDatasets = [];
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const response = await axios.get(apiUrl);
+//         setApiData(response.data);
+//       } catch (error) {
+//         console.log(error);
+//       }
+//     };
+//     fetchData();
+//   }, []);
+
+//   // console.log(apiData?.graph_data?.views);
+
+//   const views = apiData?.graph_data?.views;
+
+//   if (views) {
+//     apiDataLabels = Object.keys(views);
+//     console.log(apiDataLabels);
+//   }
+
+//   if (views) {
+//     apiDatasets = Object.values(views);
+//     console.log(apiDatasets);
+//   }
+
     useEffect(() => {
 
         const chartElement = chartRef.current;
