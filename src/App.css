@@ -1,6 +1,8 @@
 .app-container {
     width: 100%;
 }
+
+/* ---the body of the whole navbar */
 .navbar {
     width: 20%;
     height: 100vh;
@@ -16,34 +18,36 @@
     height: 10%;
     padding: 5% 10%;
 }
+/* ---Ths container of the navs itself (from Dashboard - Item 8) */
 .navigation {
-    height: 60%;
-}
-.user {
-    height: 30%;
+    height: 80%;
 }
 
-.navigation nav, .navigation ul {
+.navigation nav, 
+.navigation ul {
     width: 100%;
 }
 .navigation nav {
-    height: 50%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .navigation ul li {
-    margin: 2% 0;
-    font-size: 0.8rem;
     display: flex;
+    margin: 2% 0;
     padding: 3% 0;
     padding-left: 22%;
-    position: relative;
+    
+    font-size: 0.8rem;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: 500;
+    position: relative;
+    transition: all 0.6s ease;
 }
 .navigation ul li:hover {
     color: #FF5403;
+    transition: all 0.6s ease;
 }
 /* active class */
 .active {
@@ -53,8 +57,7 @@
 .navigation h4 {
     padding-left: 12%;
     font-size: 0.7rem;
-    font-weight: 400;
-    margin-top: 5%;
+    margin: 5% 0;
     text-transform: uppercase;
 }
 
@@ -114,7 +117,11 @@
     left: 12%;
 }
 
-/* user container */
+
+/* ---The container of the user profile */
+.user {
+    height: 10%;
+}
 .user p {
     padding-left: 23%;
     font-size: 0.9rem;
@@ -128,12 +135,6 @@
     left: 12%;
     zoom: 80%;
 }
-
-
-
-
-
-
 
 
 /* --- the body section */

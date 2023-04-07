@@ -1,15 +1,22 @@
 import React from 'react';
 import './App.css';
 import { Logo } from './assets';
+
+// Imports of the components in the body
 import { Views, Locations, Source } from './components';
 
 const App = () => {
   return (
     <div className='app-container'>
+
+      {/* The navbar of the Dashboard */}
       <div className="navbar">
+
         <div className="logo-container">
           <img src={Logo} alt="" />
         </div>
+
+        {/* The container of the navs */}
         <div className="navigation">
           <nav>
             <ul>
@@ -31,11 +38,17 @@ const App = () => {
             </ul>
           </nav>
         </div>
+
         <div className="user">
           <p>Blessing Daniels</p>
         </div>
+
       </div>
+
+      {/* --- The body of the Dashboard */}
       <div className="body">
+
+      {/* The heading of the body of the Dashboard */}
         <div className="body-heading">
           <header>Dashboard</header>
           <div className="heading-info">
@@ -54,11 +67,16 @@ const App = () => {
             <p className='day'>Custom Date</p>
           </div>
         </div>
+
+        {/* Here is the Views component created with Line chart */}
         <Views />
+
+        {/* Here are the bottom components (Location and Resources Component) */}
         <div className="base-components">
           <Locations />
           <Source />
         </div>
+
       </div>
     </div>
   )
