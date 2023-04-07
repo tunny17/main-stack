@@ -317,3 +317,12 @@
     width: 20px;
 }
 
+
+
+/*  */
+.line-chart {
+    margin: 2% 0;
+    padding: 2%;
+    border-radius: 12px;
+    border: 1px solid #EFF1F6;
+}
