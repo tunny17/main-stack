@@ -32,7 +32,8 @@ h2 {
     font-family: Söhne-Bold;
 }
 h3, 
-li {
+li,
+span {
     font-family: Söhne-Medium;
 }
 h4 {

@@ -205,14 +205,24 @@
     border: 1px solid #FF5403;
 }
 
+/* the line chart container */
+.line-chart {
+    margin: 2% 0;
+    padding: 2%;
+    border-radius: 12px;
+    border: 1px solid #EFF1F6;
+}
+
 
 /* --- Base Components */
+/* nb: i used the same styling for both classes since they're the same component but different data */
 .base-components {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
+/* subheading */
 .locations-container {
     width: 500px;
     height: 250px;
@@ -235,27 +245,26 @@
 }
 .location-header h3 {
     font-size: 18px;
-    line-height: 24px;
     letter-spacing: -0.015em;
 }
 .location-header p {
     font-size: 14px;
-    line-height: 22px;
     color: #FF5403;
     cursor: pointer;
 }
+
+
+/* --- container of the doughnut chart */
 .doughnut-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 2%;
     position: relative;
 }
-.doughnut-info-container {
-    display: flex;
-}
 
+/* the container of the data opposite the chart */
 .locations {
     width: 100%;
     padding-left: 11%;
@@ -264,13 +273,14 @@
     flex-direction: column;
     justify-content: space-between;
 }
+/* each of the p tags gotten from the mapping of the data */
 .location {
-    /* font-family: 'Söhne'; */
     font-size: 0.8rem;
     font-weight: 600;
     color: #131316;
     position: relative;
 }
+/* each of the color of the percentages */
 .location::after {
     content: '';
     position: absolute;
@@ -294,13 +304,13 @@
     background: rgba(15, 183, 122, 1);
 }
 
-
-
+/* the span tag in the p tag holding the percentages */
 .percent {
     margin-left: 5%;
     font-weight: 700;
 }
 
+/* the flags/social icons container */
 .flags {
     top: -1%;
     left: 5%;
@@ -316,10 +326,3 @@
 
 
 
-/*  */
-.line-chart {
-    margin: 2% 0;
-    padding: 2%;
-    border-radius: 12px;
-    border: 1px solid #EFF1F6;
-}

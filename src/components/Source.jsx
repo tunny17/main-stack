@@ -3,20 +3,25 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
+// Local importation of the icons for the socials
 import { source1, source2, source3 } from '../assets';
 
+// Importation of the google icon from react-icons library
 import { FcGoogle } from 'react-icons/fc';
-
-
 
 const Locations = () => {
 
+  const apiUrl = 'https://fe-task-api.mainstack.io/';
+
+  // Stores Data coming directly from the API
   const [apiData, setApiData] = useState({});
+
+  // variables to store an array of data from the API
   let apiDataLabels = [];
   let apiDatasets = [];
 
-  const apiUrl = 'https://fe-task-api.mainstack.io/';
-
+  
+// useEffect to fetch data
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,18 +36,23 @@ const Locations = () => {
 
   // console.log(apiData);
 
-
+// Stores data concerned with the component (top_sources) in a variable
   const sources = apiData?.top_sources;
 
+  // checks if views exist 
+  // maps through views and stores the country array inside "apiDataLabels"
   if (sources) {
     apiDataLabels = sources.map(source => source.source);
   }
 
+  // checks if views exist 
+  // maps through views and stores the country array inside "apiDataLabels"
   if (sources) {
     apiDatasets = sources.map(source => source.percent);
   }
   
 
+// ---- Chart Data
 
   const data = {
     labels: apiDataLabels,
@@ -111,8 +121,10 @@ const Locations = () => {
       </div>
       <div className="doughnut-container">
         <div className="locations">
+          {/* Checks if views exists then maps through the data and creates a p tag with countries as it's content and a span tag for it's percentages */}
           {sources?.map((source) => <p className='location'>{source.source}<span className='percent'>{source.percent}%</span></p>)}
         </div>
+        {/* Each of the icons */}
         <div className="flags">
           <FcGoogle size='1.3em'/>
           <img src={source1} alt="" />

@@ -3,22 +3,28 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
+// importation of flag icons
 import { flag1, flag2, flag3, flag4, flag5 } from '../assets'
-
 
 
 const Locations = () => {
 
+  const apiUrl = 'https://fe-task-api.mainstack.io/';
+
+  // State to store incoming data from API
   const [apiData, setApiData] = useState({});
+  
+  // variables to store an array of data from the API
   let apiDataLabels = [];
   let apiDatasets = [];
 
-  const apiUrl = 'https://fe-task-api.mainstack.io/';
-
+  
+  // useEffect to fetch data
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(apiUrl);
+        // Storage of data
         setApiData(response.data);
       } catch (error) {
         console.log(error);
@@ -27,22 +33,26 @@ const Locations = () => {
     fetchData();
   }, []);
 
-  console.log(apiData);
+  // console.log(apiData);
 
+  // Stores data concerned with the component (top_locations)
+  const locations = apiData?.top_locations;
 
-  const views = apiData?.top_locations;
-
-
-  if (views) {
-    apiDataLabels = views.map(location => location.country);
+  // checks if views exist 
+  // maps through views and stores the country array inside "apiDataLabels"
+  if (locations) {
+    apiDataLabels = locations.map(location => location.country);
   }
 
-  if (views) {
-    apiDatasets = views.map(location => location.percent);
+  // checks if views exist 
+  // maps through views and stores the country array inside "apiDataLabels"
+  if (locations) {
+    apiDatasets = locations.map(location => location.percent);
   }
   
 
-
+  // ---- Chart Data
+  
   const data = {
     labels: apiDataLabels,
     datasets: [
@@ -110,8 +120,10 @@ const Locations = () => {
       </div>
       <div className="doughnut-container">
         <div className="locations">
-          {views?.map((view) => <p className='location'>{view.country}<span className='percent'>{view.percent}%</span></p>)}
+          {/* Checks if views exists then maps through the data and creates a p tag with countries as it's content and a span tag for it's percentages */}
+          {locations?.map((location) => <p className='location'>{location.country}<span className='percent'>{location.percent}%</span></p>)}
         </div>
+        {/* Each of the flags */}
         <div className="flags">
           <img src={flag1} alt="" />
           <img src={flag2} alt="" />
