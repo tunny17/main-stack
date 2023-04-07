@@ -4,27 +4,34 @@ import axios from 'axios';
 
 const Views = () => {
     const chartRef = useRef(null);
-
     const apiUrl = 'https://fe-task-api.mainstack.io/';
 
+    // states to manage the data fetched from the API
     const [apiData, setApiData] = useState({});
+
+    // empty arrays to store both the labels and datasets coming from thr API in respectively
     let apiDataLabels = [];
     let apiDatasets = [];
 
     useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(apiUrl);
-            setApiData(response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-    fetchData();
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(apiUrl);
+                // stores the API data in apiData
+                setApiData(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
     }, []);
 
+    // Stores the data concerned with the line chart up to the views object in the API for easy access
     const views = apiData?.graph_data?.views;
 
+    // condition to check if views exist 
+    // convert the object into an array and store in "apiDataLabels"
+    //  convert the labels into a day and month format
     if (views) {
         apiDataLabels = Object.keys(views).map((dateStr) => {
             const date = new Date(dateStr);
@@ -35,11 +42,31 @@ const Views = () => {
         console.log('data labels:', apiDataLabels);
     }
 
+    // A switch case function that adds necessary suffixes for every case
+    function daySuffix(day) {
+        if (day >= 11 && day <= 13) {
+        return 'th';
+        }
+        switch (day % 10) {
+            case 1:
+                return 'st';
+            case 2:
+                return 'nd';
+            case 3:
+                return 'rd';
+            default:
+                return 'th';
+        }
+    }
+
+    // condition to check if views exist 
+    // convert the object into an array and store in "apiDatasets"
     if (views) {
         apiDatasets = Object.values(views);
         console.log('data sets:', apiDatasets);
     }
 
+    // Another use effect that makes sure the chart is rerendered in case "apiDataLabels" and "apiDatasets" are updated
     useEffect(() => {
         if (apiDataLabels.length > 0 && apiDatasets.length > 0) {
             const chartElement = chartRef.current;
@@ -96,20 +123,6 @@ const Views = () => {
     );
 };
 
-function daySuffix(day) {
-    if (day >= 11 && day <= 13) {
-    return 'th';
-    }
-    switch (day % 10) {
-        case 1:
-            return 'st';
-        case 2:
-            return 'nd';
-        case 3:
-            return 'rd';
-        default:
-            return 'th';
-    }
-}
+
 
 export default Views;
