@@ -4,9 +4,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Söhne', sans-serif;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+@font-face {
+    font-family: Söhne;
+    src: url('./assets/Font/TestSöhne-Halbfett.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: Söhne;
+    src: url('./assets/Font/TestSöhne-Leicht.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Söhne;
+    src: url('./assets/Font/TestSöhneBuch.otf');
+    font-weight: 600;
 }
