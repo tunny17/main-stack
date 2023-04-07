@@ -59,12 +59,12 @@ const App = () => {
             <p className='analytics'>View Analytics</p>
           </div>
           <div className="days">
-            <p className='day'>1 Day</p>
-            <p className='day'>3 Days</p>
-            <p className='day'>7 Days</p>
-            <p className='day'>30 Day</p>
-            <p className='day active-day'>All Time</p>
-            <p className='day'>Custom Date</p>
+            <h4 className='day'>1 Day</h4>
+            <h4 className='day'>3 Days</h4>
+            <h4 className='day'>7 Days</h4>
+            <h4 className='day'>30 Day</h4>
+            <h4 className='day active-day'>All Time</h4>
+            <h4 className='day'>Custom Date</h4>
           </div>
         </div>
 

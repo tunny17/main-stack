@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Söhne', sans-serif;
+    color: #131316;
 }
 
 body::-webkit-scrollbar {
@@ -12,17 +12,32 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-    font-family: Söhne;
+    font-family: Söhne-Bold;
     src: url('./assets/Font/TestSöhne-Halbfett.otf');
-    font-weight: 400;
 }
 @font-face {
-    font-family: Söhne;
+    font-family: Söhne-Light;
     src: url('./assets/Font/TestSöhne-Leicht.otf');
-    font-weight: 500;
 }
 @font-face {
-    font-family: Söhne;
+    font-family: Söhne-Medium;
     src: url('./assets/Font/TestSöhneBuch.otf');
-    font-weight: 600;
+}
+
+h1, 
+header {
+    font-family: Söhne-Bold;
+}
+h2 {
+    font-family: Söhne-Bold;
+}
+h3, 
+li {
+    font-family: Söhne-Medium;
+}
+h4 {
+    font-family: Söhne-Light;
+}
+p {
+    font-family: Söhne-Light;
 }

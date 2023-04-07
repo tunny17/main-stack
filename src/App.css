@@ -65,55 +65,55 @@
 .dashboard::before {
     content: url(./assets/dashboard.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav1::before {
     content: url(./assets/nav-1.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav2::before {
     content: url(./assets/nav-2.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav3::before {
     content: url(./assets/nav-3.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav4::before {
     content: url(./assets/nav-4.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav5::before {
     content: url(./assets/nav-5.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav6::before {
     content: url(./assets/nav-6.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav7::before {
     content: url(./assets/nav-7.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 .nav8::before {
     content: url(./assets/nav-8.svg);
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 12%;
 }
 
@@ -131,14 +131,13 @@
 .user p::before {
     content: url('./assets/user.svg');
     position: absolute;
-    top: -25%;
+    top: -22%;
     left: 12%;
     zoom: 80%;
 }
 
 
 /* --- the body section */
-
 
 .body {
     width: 80%;
@@ -152,7 +151,7 @@
     letter-spacing: -0.015em;
     color: #131316;
     margin-bottom: 3%;
-    font-weight: 700;
+    font-weight: 600;
 }
 .body .heading-info {
     width: 100%;
@@ -166,22 +165,21 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.015em;
+    font-weight: 600;
 }
 .heading-info .info p {
     font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
-    margin-top: 2%;
+    
 }
-.analytics {
+.heading-info .analytics {
+    margin-top: 2%;
     font-size: 14px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
     color: #FF5403;
-    font-weight: 400;
+    cursor: pointer;
 }
 
+/* ---filter for the days */
 .days {
     width: 50%;
     display: flex;
@@ -190,7 +188,6 @@
 }
 .day {
     font-size: 0.8rem;
-    font-weight: 500;
     padding: 0.7rem;
     border: 1px solid #EFF1F6;
     border-radius: 100px;
@@ -207,7 +204,6 @@
     background: #FFDDCD;
     border: 1px solid #FF5403;
 }
-
 
 
 /* --- Base Components */
