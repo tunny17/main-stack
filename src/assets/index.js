@@ -18,3 +18,8 @@ export { default as flag2 } from './flag-2.png';
 export { default as flag3 } from './flag-3.png';
 export { default as flag4 } from './flag-4.png';
 export { default as flag5 } from './flag-5.png';
+
+// export for the source(socials) icons
+export { default as source1 } from './source-1.svg';
+export { default as source2 } from './source-2.svg';
+export { default as source3 } from './source-3.svg';

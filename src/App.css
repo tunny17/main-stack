@@ -226,6 +226,7 @@
     margin-top: 5%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5%;
 }
 .location-header {
     width: 100%;
@@ -252,15 +253,15 @@
     width: 100%;
     height: 100%;
     margin-top: 5%;
+    position: relative;
 }
-
-
 .doughnut-info-container {
     display: flex;
 }
+
 .locations {
     width: 100%;
-    padding-left: 9%;
+    padding-left: 11%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -302,3 +303,17 @@
     margin-left: 5%;
     font-weight: 700;
 }
+
+.flags {
+    top: -1%;
+    left: 5%;
+    position: absolute;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flags img {
+    width: 20px;
+}
+

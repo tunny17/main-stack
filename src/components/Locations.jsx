@@ -3,6 +3,8 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
+import { flag1, flag2, flag3, flag4, flag5 } from '../assets'
+
 
 
 const Locations = () => {
@@ -109,6 +111,13 @@ const Locations = () => {
       <div className="doughnut-container">
         <div className="locations">
           {views?.map((view) => <p className='location'>{view.country}<span className='percent'>{view.percent}%</span></p>)}
+        </div>
+        <div className="flags">
+          <img src={flag1} alt="" />
+          <img src={flag2} alt="" />
+          <img src={flag3} alt="" />
+          <img src={flag4} alt="" />
+          <img src={flag5} alt="" />
         </div>
         <Doughnut style={{margin: '0 auto', width: 250, height: 120}} data={data} options={options}/>
       </div>

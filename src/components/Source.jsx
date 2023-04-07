@@ -3,7 +3,9 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
-import { flag1, flag2, flag3, flag4, flag5 } from '../assets'
+import { source1, source2, source3 } from '../assets';
+
+import { FcGoogle } from 'react-icons/fc';
 
 
 
@@ -112,11 +114,10 @@ const Locations = () => {
           {sources?.map((source) => <p className='location'>{source.source}<span className='percent'>{source.percent}%</span></p>)}
         </div>
         <div className="flags">
-          <img src={flag1} alt="" />
-          <img src={flag2} alt="" />
-          <img src={flag3} alt="" />
-          <img src={flag4} alt="" />
-          <img src={flag5} alt="" />
+          <FcGoogle size='1.3em'/>
+          <img src={source1} alt="" />
+          <img src={source2} alt="" />
+          <img src={source3} alt="" />
         </div>
         <Doughnut style={{margin: '0 auto', width: 250, height: 120}} data={data} options={options}/>
       </div>
