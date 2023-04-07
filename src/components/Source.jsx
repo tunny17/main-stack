@@ -3,14 +3,17 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
-const apiUrl = 'https://fe-task-api.mainstack.io/';
+import { flag1, flag2, flag3, flag4, flag5 } from '../assets'
 
 
 
-const Source = () => {
+const Locations = () => {
+
   const [apiData, setApiData] = useState({});
   let apiDataLabels = [];
   let apiDatasets = [];
+
+  const apiUrl = 'https://fe-task-api.mainstack.io/';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,16 +27,17 @@ const Source = () => {
     fetchData();
   }, []);
 
+  // console.log(apiData);
 
-  const views = apiData?.top_sources;
 
+  const sources = apiData?.top_sources;
 
-  if (views) {
-    apiDataLabels = views.map(info => info.source);
+  if (sources) {
+    apiDataLabels = sources.map(source => source.source);
   }
 
-  if (views) {
-    apiDatasets = views.map(info => info.percent);
+  if (sources) {
+    apiDatasets = sources.map(source => source.percent);
   }
   
 
@@ -52,6 +56,7 @@ const Source = () => {
           'rgba(15, 183, 122, 1)'
         ],
         hoverOffset: 4,
+        weight: 1,
         borderWidth: 0
       },
     ],
@@ -59,16 +64,16 @@ const Source = () => {
 
 
   const options = {
+    responsive: false,
     maintainAspectRatio: false,
     plugins: {
       legend: {
+        display: false,
         position: 'left',
         align: 'center',
         labels: {
-          'fontSize': 30,
           boxWidth: 10,
           boxHeight: 10,
-          padding: 20,
           usePointStyle: true,
           pointStyle: 'circle',
           generateLabels: function(chart) {
@@ -99,14 +104,24 @@ const Source = () => {
   return (
     <div className='locations-container'>
       <div className="location-header">
-        <h3>Top Referral Source</h3>
+        <h3>Top Referral source</h3>
         <p>View full reports</p>
       </div>
       <div className="doughnut-container">
-        <Doughnut style={{margin: '0 auto', width: 500, height: 200}} data={data} options={options}/>
+        <div className="locations">
+          {sources?.map((source) => <p className='location'>{source.source}<span className='percent'>{source.percent}%</span></p>)}
+        </div>
+        <div className="flags">
+          <img src={flag1} alt="" />
+          <img src={flag2} alt="" />
+          <img src={flag3} alt="" />
+          <img src={flag4} alt="" />
+          <img src={flag5} alt="" />
+        </div>
+        <Doughnut style={{margin: '0 auto', width: 250, height: 120}} data={data} options={options}/>
       </div>
     </div>
   );
 };
 
-export default Source;
+export default Locations;
