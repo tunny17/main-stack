@@ -3,14 +3,15 @@ import '../App.css';
 import axios from 'axios';
 import { Doughnut } from 'react-chartjs-2';
 
-const apiUrl = 'https://fe-task-api.mainstack.io/';
-
 
 
 const Locations = () => {
+
   const [apiData, setApiData] = useState({});
   let apiDataLabels = [];
   let apiDatasets = [];
+
+  const apiUrl = 'https://fe-task-api.mainstack.io/';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,8 @@ const Locations = () => {
     };
     fetchData();
   }, []);
+
+  console.log(apiData);
 
 
   const views = apiData?.top_locations;
@@ -60,16 +63,16 @@ const Locations = () => {
 
 
   const options = {
-    // responsive: false,
+    responsive: false,
     maintainAspectRatio: false,
     plugins: {
       legend: {
+        display: false,
         position: 'left',
         align: 'center',
         labels: {
           boxWidth: 10,
           boxHeight: 10,
-          padding: 20,
           usePointStyle: true,
           pointStyle: 'circle',
           generateLabels: function(chart) {
@@ -104,7 +107,10 @@ const Locations = () => {
         <p>View full reports</p>
       </div>
       <div className="doughnut-container">
-        <Doughnut style={{margin: '0 auto', width: 500, height: 200}} data={data} options={options}/>
+        <div className="locations">
+          {views?.map((view) => <p className='location'>{view.country}<span className='percent'>{view.percent}%</span></p>)}
+        </div>
+        <Doughnut style={{margin: '0 auto', width: 250, height: 120}} data={data} options={options}/>
       </div>
     </div>
   );

@@ -218,7 +218,7 @@
 
 .locations-container {
     width: 500px;
-    height: 300px;
+    height: 250px;
     border: 1px solid #EFF1F6;
     border-radius: 12px;
 
@@ -244,4 +244,61 @@
     font-size: 14px;
     line-height: 22px;
     color: #FF5403;
+    cursor: pointer;
+}
+.doughnut-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+
+.doughnut-info-container {
+    display: flex;
+}
+.locations {
+    width: 100%;
+    padding-left: 9%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.location {
+    /* font-family: 'Söhne'; */
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #131316;
+    position: relative;
+}
+.location::after {
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 10px;
+    background: rgba(89, 158, 234, 1);
+    border-radius: 10px;
+    top: 20%;
+    margin-left: 5%;
+}
+.location:nth-child(2):after {
+    background: rgba(132, 79, 246, 1);
+}
+.location:nth-child(3):after {
+    background: rgba(240, 148, 104, 1);
+}
+.location:nth-child(4):after {
+    background: rgba(250, 183, 10, 1);
+}
+.location:nth-child(5):after {
+    background: rgba(15, 183, 122, 1);
+}
+
+
+
+.percent {
+    margin-left: 5%;
+    font-weight: 700;
 }
